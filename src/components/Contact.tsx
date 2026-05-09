@@ -4,8 +4,18 @@ import { track } from "@/lib/analytics";
 
 const items = [
   { icon: Phone, label: "Call", value: "+91 84088 11234", href: "tel:+918408811234" },
-  { icon: MessageCircle, label: "WhatsApp", value: "wa.me/918408811234", href: "https://wa.me/918408811234" },
-  { icon: Mail, label: "Email", value: "hello@scaliomedia.in", href: "mailto:hello@scaliomedia.in" },
+  {
+    icon: MessageCircle,
+    label: "WhatsApp",
+    value: "wa.me/918408811234",
+    href: "https://wa.me/918408811234",
+  },
+  {
+    icon: Mail,
+    label: "Email",
+    value: "hello@scaliomedia.in",
+    href: "mailto:hello@scaliomedia.in",
+  },
   { icon: MapPin, label: "Location", value: "Bhopal, Madhya Pradesh, India", href: "#" },
   { icon: Globe, label: "Website", value: "scaliomedia.in", href: "#" },
 ];
@@ -24,7 +34,10 @@ export const Contact = () => {
           <span className="inline-block px-4 py-1.5 rounded-full bg-[#F5F7FA] text-[#1B2A4A] text-xs font-semibold tracking-widest uppercase">
             Get in Touch
           </span>
-          <h2 id="contact-heading" className="mt-6 font-display font-bold text-4xl md:text-5xl text-[#1A1A2E]">
+          <h2
+            id="contact-heading"
+            className="mt-6 font-display font-bold text-4xl md:text-5xl text-[#1A1A2E]"
+          >
             Let's Build Something <span className="text-gradient">Great Together</span>
           </h2>
         </motion.div>
@@ -38,9 +51,7 @@ export const Contact = () => {
             transition={{ duration: 0.6 }}
             className="rounded-3xl p-8 md:p-10 bg-[#F5F7FA] shadow-card"
           >
-            <h3 className="font-display font-bold text-2xl text-[#1A1A2E] mb-6">
-              Contact Details
-            </h3>
+            <h3 className="font-display font-bold text-2xl text-[#1A1A2E] mb-6">Contact Details</h3>
             <div className="space-y-4">
               {items.map((it) => {
                 const Icon = it.icon;
@@ -53,7 +64,10 @@ export const Contact = () => {
                     rel={isExternal ? "noopener noreferrer" : undefined}
                     aria-label={`${it.label}: ${it.value}${isExternal ? " (opens in new tab)" : ""}`}
                     onClick={() =>
-                      track("contact_click", { location: "contact_section", channel: it.label.toLowerCase() })
+                      track("contact_click", {
+                        location: "contact_section",
+                        channel: it.label.toLowerCase(),
+                      })
                     }
                     className="group flex items-center gap-4 p-4 rounded-2xl bg-white hover:shadow-card transition-all"
                   >
@@ -85,8 +99,14 @@ export const Contact = () => {
             transition={{ duration: 0.6 }}
             className="relative rounded-3xl p-8 md:p-10 bg-hero overflow-hidden"
           >
-            <div className="absolute -top-20 -right-20 w-60 h-60 rounded-full bg-[#4A9EFF]/30 blur-3xl" aria-hidden="true" />
-            <div className="absolute -bottom-20 -left-20 w-60 h-60 rounded-full bg-[#00D48A]/30 blur-3xl" aria-hidden="true" />
+            <div
+              className="absolute -top-20 -right-20 w-60 h-60 rounded-full bg-[#4A9EFF]/30 blur-3xl"
+              aria-hidden="true"
+            />
+            <div
+              className="absolute -bottom-20 -left-20 w-60 h-60 rounded-full bg-[#00D48A]/30 blur-3xl"
+              aria-hidden="true"
+            />
 
             <div className="relative glass-dark rounded-2xl p-8">
               <span className="inline-block px-3 py-1 rounded-full bg-[#00D48A]/20 text-[#00D48A] text-xs font-bold tracking-widest uppercase">
@@ -106,7 +126,9 @@ export const Contact = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Message Scalio Media on WhatsApp (opens in new tab)"
-                  onClick={() => track("cta_click", { location: "contact_card", channel: "whatsapp" })}
+                  onClick={() =>
+                    track("cta_click", { location: "contact_card", channel: "whatsapp" })
+                  }
                   className="flex items-center justify-center gap-2 w-full px-6 py-4 rounded-xl bg-[#00D48A] text-white font-semibold shadow-glow-green hover:scale-[1.02] transition-transform"
                 >
                   <MessageCircle size={18} aria-hidden="true" /> Message on WhatsApp

@@ -93,7 +93,11 @@ export const Navbar = () => {
           className="flex items-center gap-3 group rounded-md"
           aria-label="Scalio Media — back to top"
         >
-          <Logo size={38} className="transition-transform group-hover:rotate-12 duration-500" />
+          <img
+            src="/logo.png"
+            alt="Scalio Media Logo"
+            className="w-10 h-10 object-contain transition-transform group-hover:scale-105 duration-300"
+          />
           <span className="font-display font-bold text-xl text-white tracking-tight">
             Scalio<span className="text-gradient"> Media</span>
           </span>

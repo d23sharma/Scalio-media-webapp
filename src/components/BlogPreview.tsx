@@ -50,9 +50,7 @@ export const BlogPreview = () => {
               <h3 className="mt-5 font-display font-bold text-xl text-[#1A1A2E] leading-snug">
                 {p.title}
               </h3>
-              <p className="mt-3 text-[#6B7280] text-sm leading-relaxed flex-1">
-                {p.excerpt}
-              </p>
+              <p className="mt-3 text-[#6B7280] text-sm leading-relaxed flex-1">{p.excerpt}</p>
               <div className="mt-6 pt-5 border-t border-[#F5F7FA] flex items-center justify-between">
                 <span className="inline-flex items-center gap-1.5 text-[#6B7280] text-xs">
                   <Clock size={12} aria-hidden="true" /> {p.readTime}
