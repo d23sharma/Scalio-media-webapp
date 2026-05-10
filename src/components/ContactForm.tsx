@@ -161,9 +161,7 @@ export const ContactForm = () => {
               Service Interested In
             </label>
             <select id="cf-service" {...register("service")} className={fieldClass} defaultValue="">
-              <option value="" disabled>
-                Select a service
-              </option>
+              <option value="">Select a service</option>
               <option>Instagram Growth</option>
               <option>Video Production</option>
               <option>Meta Ads</option>
@@ -203,3 +201,27 @@ export const ContactForm = () => {
     </section>
   );
 };
+
+// export const ContactForm = () => {
+//   return (
+//     <div className="p-10 max-w-xl mx-auto">
+//       <form className="space-y-4">
+//         <input type="text" placeholder="Your Name" className="w-full border p-4 rounded-lg" />
+
+//         <input type="email" placeholder="Email" className="w-full border p-4 rounded-lg" />
+
+//         <select className="w-full border p-4 rounded-lg">
+//           <option>Select Service</option>
+//           <option>Instagram Growth</option>
+//           <option>Meta Ads</option>
+//         </select>
+
+//         <textarea placeholder="Message" className="w-full border p-4 rounded-lg" rows={5} />
+
+//         <button type="submit" className="bg-black text-white px-6 py-3 rounded-lg">
+//           Submit
+//         </button>
+//       </form>
+//     </div>
+//   );
+// };
